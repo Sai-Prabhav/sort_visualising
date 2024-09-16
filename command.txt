@@ -1,0 +1,2 @@
+rm ./frames/*  || gcc sort.c  array.c sketch.c  -o sort &&  ./sort     
+inkscape --export-type=png  frames/*.svg  && ffmpeg -framerate 60 -pattern_type glob -i 'frames/*.png' -c:v libx264 -pix_fmt yuv420p sort_1.mp4
